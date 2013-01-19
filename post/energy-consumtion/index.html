@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>iperf |  Net blog</title>
+    <title>Energy consumtion |  Net blog</title>
     <meta name="description" content="hi">
     <meta name="author" content="JuneHyuck Park">
     <meta name="keywords" content="java" />
@@ -104,7 +104,7 @@
                     <h3>About this Article</h3>
                     <p>
                         <h5>Date Released:</h5>
-                        <span>Saturday, January 19 2013 1:48 PM</span>
+                        <span>Saturday, January 19 2013 1:51 PM</span>
                     </p>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                     <div class="well bg">
                         
                         <div class="page-header">
-                            <h1>iperf</h1>
+                            <h1>Energy consumtion</h1>
                         </div>
 
                         <div class="pull-right social-area">
@@ -173,52 +173,67 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_44">iperf 환경구축 및 이슈처리</h1>
-
-<h3 id="toc_45">Window</h3>
-<p>iperf를 다운받은 후 iperf가 있는 폴더에서 cmd창에 iperf를 호출</p>
-<h3 id="toc_46">Mac</h3>
-<p>mac버전 iperf를 다운후 터미널을 연후 
-맥용 바이너리(실행파일) 만드는 법  </p>
+                            <h1 id="toc_42">power 측정</h1>
+<p>Monsoon power monitor, Eprof, AppScope, PowerTutor, powertop  </p>
 <ol>
-<li>받은 소스 파일의 압축해제<br></li>
-<li>디렉터리가 생성되면 터미널 실행 (유틸리티-&gt;터미널)<br></li>
-<li>아래 명령어를 입력하여 컴파일 및 설치<br></li>
-</ol>
-
-<blockquote>
-<p>cd ~/Downloads/iperf-2.0.5 (압축해제한 디렉터리로 이동해야 합니다)<br>
-./configure<br>
-make<br>
-sudo make install (자기 계정의 패스워드 입력)<br>
-sudo cd /usr/local/bin<br>
-sudo mv iperf /usr/bin (자기 계정의 패스워드 입력)    </p></blockquote>
-
-<h3 id="toc_47">iperf 명령어</h3>
-
-<h2 id="toc_48"></h2>
-
-<blockquote>
-<p> -v(version) : 버전 확인<br>
-  -h(help) : 도움말<br>
-  -p(port number) : 포트 번호(디폴트 5001)<br>
-  -u(udp) : TCP 대신 UDP 사용(디폴트 TCP)<br>
-  -w(window size) : TCP 윈도우 사이즈(디폴트 8Kbyte)<br>
-  -M(MTU) : Maximum Transfer Unit<br>
-  -V : IPv6<br>
-  -c(client) : 클라이언트 모드<br>
-  -b(bandwidth) : UDP에서 대역폭 지정(디폴트 1Mbps)<br>
-  -t(time) : 측정시간(디폴트 10초)<br>
-  -s(server) : 서버 모드<br>
-  -D(Daemon) : 윈도우 서비스에 등록(서버만 해당)<br>
-  -R(Remove) : 윈도우 서비스에서 제거(서버만 해당)  </p></blockquote>
-
-<h2 id="toc_49"></h2>
-
+<li><p>monsoon  </p>
 <ul>
-<li>몇가지 이슈가 있었는데, 맥에서는 xcode의 Command Line Tools가 깔려있어야하고 mac버전 설치시 명령어중간에 하나의<br>
-과정이 잘못되어 있었는데 그것이 무엇인지 기억이 안남.</li>
-</ul>
+<li>매뉴얼, <a href="http://msoon.github.com/powermonitor/PowerTool/doc/Power%20Monitor%20Manual.pdf">http://msoon.github.com/powermonitor/PowerTool/doc/Power%20Monitor%20Manual.pdf</a></li>
+</ul></li>
+<li><p>Eprof</p>
+<ul>
+<li>Energy Profiler라는 명칭을 가진 이 Eprof는 마이크로스트사에서 만들었다고 하지만 관련 자료를 찾을수 없음</li>
+<li>관련 논문<br>
+Abhinav Pathak, Y. Charlie Hu, Ming Zhang, Where is the energy spent inside my app? Fine Grained Energy Accounting on Smartphones with Eprof</li>
+</ul></li>
+<li><p>AppScope</p>
+<ul>
+<li>연세대 차호정 교수 논문을 찾아 보았고 관련 프로그램을 다운 받음<br>
+AppScope, <a href="http://css3.yonsei.ac.kr:5612/appscope/wiki/Downloads">http://css3.yonsei.ac.kr:5612/appscope/wiki/Downloads</a><br></li>
+<li>AppScope는 현재 HTC Nexus One만을 지원함</li>
+<li>PowerTutor의 한계점과 gps, audio의 정확성에 대한 점을 수정하려고 연세대에서 제작함<br>
+procfs와 BatteryStat이라는 특수 파일 시스템만을 이용하여 하드웨어 컴포넌트들의 사용통계량을 계산하기때문에 정확성보장을 하지못함.
+이것은 항상 폴링을 하고 있어야한다는 점과 이러한 특수파일들이 wifi와 GPS를 프로세스 단위로 제공하지 않아서 이러한 파일에 의존적으로밖에 
+정보를 제공하지 못한다. 이러한 것들은 커널을 수정함으로써 극복할수는 있다. 
+관련 논문으로는 AppScope: Application Energy Metering Framework for Android Smartphones using Kernel Activity Monitoring 이것을 참조 </li>
+<li>관련 논문<br>
+D. Kim, W. Jung, H. Cha, &quot;&#39;Runtime Power Estimation of Mobile AMOLED Displays,&quot;  2013 Design, Automation &amp; Test Europe (DATE&#39;13), Grenoble, France, March 2013, accepted<br>
+W. Jung, C. Kang, C. Yoon, D. Kim and H. Cha, &quot; DevScope: A Nonintrusive and Online Power Analysis for Smartphone Hardware Components,&quot;  2012 International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS&#39;12), Tampere, Finland, October 2012.<br>
+C. Yoon, D. Kim, W. Jung, C. Kang, H. Cha, &quot; AppScope: Application Energy Metering Framework for Android Smartphone using Kernel Activity Monitoring,&quot;  2012 USENIX Annual Technical Conference (USENIX ATC&#39;12), Boston, MA, USA, June 2012.
+W. Jung, D. Kim, H. Cha, &quot;Observing Thermal Characteristics of Energy-aware Mobile Devices,&quot;  2nd Workshop on Cyber-Physical Systems, Networks, and Applications (CPSNA&#39;12), Seoul, Korea, August 19, 2012, pp.465-468.<br>
+S. Choi, B. Song, R. Ha, H. Cha, &quot;Energy-Aware Pipeline Monitoring System Using Piezoelectric Sensor&quot;, IEEE Sensors Jounal, Vol. 12, Issue. 6, June 2012, pp. 1695-1702.<br>
+S. Choi, H. Hwang, B. Song, H. Cha, &quot;Hardware-assisted Energy Monitoring Architecture for Micro Sensor Nodes&quot;, Journal of Systems Architecture, Elsevier, Vol.58, Issue 2, February 2012, pp.73-85.<br>
+J. Choi, H. Cha, &quot;System-Level Power Management for SoC-based Mobile Devices,&quot; IET Computers &amp; Digital Techniques, Volume 4, Issue 5, September 2010, pp. 400-409.<br>
+J. Choi, H. Cha, &quot;A Processor Power Management Scheme for Handheld Systems Considering Off-chip Contributions,&quot;IEEE Transactions on Industrial Informatics, Volume 6, Number 3, August 2010, pp. 255-264.<br>
+W. Jung, K. Kim, H. Cha, &quot;UserScope: A Fine-grained Kernel-level Framework for Monitoring Energy-related Smartphone User Contexts,&quot; 2012, submitted.</li>
+</ul></li>
+<li><p>PowerTutor</p>
+<ul>
+<li>핸드폰에 다운 받아서 실행해봄(wifi가 측정불가, 소스분석중)</li>
+<li>오픈소스 다운받음, <a href="https://github.com/msg555/PowerTutor">https://github.com/msg555/PowerTutor</a><br>
+공식홈페이지, <a href="http://ziyang.eecs.umich.edu/projects/powertutor/index.html">http://ziyang.eecs.umich.edu/projects/powertutor/index.html</a></li>
+<li>대학교수들과 구글사의 엔지니어가 합작하여 개발자들을 위해 만듬</li>
+<li>여러 논문자료에서 이것을 통해 에너지 측정을 함(심도있는 측정내용은 아니었음.)<br>
+리건, Jin Xiao, 홍원기, 스마트폰을 위한 자동화된 어플리케이션 인지 배터리 관리 방안에 관한 연구 </li>
+<li>PowerTutor를 이용해 관련 데이터를 꺼내 원하는 자료로 만들수 있음, <a href="http://stephendnicholas.com/archives/202">http://stephendnicholas.com/archives/202</a>
+<img src="http://stephendnicholas.com/wp-content/uploads/2011/09/PT6.png" alt="&lt;Display Name&gt;">
+<img src="http://stephendnicholas.com/wp-content/uploads/2011/09/PT8.png" alt="&lt;Display Name&gt;"></li>
+<li>관련 논문<br>
+A Framework for Application Energy Consumption analysis in Smart Phones</li>
+</ul></li>
+<li><p>Powertop</p>
+<ul>
+<li>공식홈페이지, <a href="https://01.org/powertop/">https://01.org/powertop/</a></li>
+<li>Unix계열 pc에 대한 전력관리 툴</li>
+<li>관련 프로그램을 받았고 이것을 핸드폰에 플래쉬하여 배터리를 측정할수 있다고함.</li>
+<li>정확한 방법은 아직 찾지 못함.</li>
+</ul></li>
+<li><p>Powermeter, Trepn Profiler</p>
+<ul>
+<li>이것들은 다운 받아 실행했지만 원하는 기능이 없거나 아직 실행방법을 정확히 모름</li>
+<li>Trepn Profiler, <a href="https://developer.qualcomm.com/mobile-development/development-devices/trepn-profiler">https://developer.qualcomm.com/mobile-development/development-devices/trepn-profiler</a></li>
+</ul></li>
+</ol>
 
                         </div>
                         <hr />
@@ -226,13 +241,13 @@ sudo mv iperf /usr/bin (자기 계정의 패스워드 입력)    </p></blockquot
                         <div class="row-fluid">
                             
                             <div class="pull-right">
-                                <a href="/post/number-push-the-limit-of-wifi-based-localization-for-smartphones" class="btn btn-info">#Push the Limit of WiFi based Localization for Smartphones <i class="icon-white icon-chevron-right"></i></a>
+                                <a href="/post/iperf" class="btn btn-info">iperf <i class="icon-white icon-chevron-right"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left">
-                                <a href="/post/energy-consumtion" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> Energy consumtion</a>
+                                <a href="/post/batterymanager-yoyag" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> Batterymanager 요약</a>
                             </div>
                             
                         </div>
@@ -250,9 +265,11 @@ sudo mv iperf /usr/bin (자기 계정의 패스워드 입력)    </p></blockquot
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/iperf">iperf</a>&nbsp;-->
+            <!--<a href="/tag/battery">battery</a>&nbsp;-->
             <!---->
-            <!--<a href="/tag/traffic">traffic</a>&nbsp;-->
+            <!--<a href="/tag/power">power</a>&nbsp;-->
+            <!---->
+            <!--<a href="/tag/energy">energy</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->

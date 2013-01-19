@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Net blog]]></title><description><![CDATA[hi]]></description><link>88youiju.github.com</link><image><url>88youiju.github.com/public/img/favorite.png</url><title>Net blog</title><link>88youiju.github.com</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 19 Jan 2013 04:49:40 GMT</lastBuildDate><atom:link href="88youiju.github.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[iperf]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_48">iperf 환경구축 및 이슈처리</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Net blog]]></title><description><![CDATA[hi]]></description><link>88youiju.github.com</link><image><url>88youiju.github.com/public/img/favorite.png</url><title>Net blog</title><link>88youiju.github.com</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 19 Jan 2013 04:54:38 GMT</lastBuildDate><atom:link href="88youiju.github.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[#Push the Limit of WiFi based Localization for Smartphones]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_57">Push the Limit of WiFi based Localization for Smartphones</h1>
 
-<h3 id="toc_49">Window</h3>
+<h3 id="toc_58">요약</h3>
+<p>사용자와 기업을 위해 기반을 둔 새로운 위치기반(novel location)을 사용하려면 스마트폰의 Indoor localization의 높은 정확성은 매우 중요하다. 이 논문에서는, 우리의 목적을 위해 먼저 WIFI에 대한 현지화의 적합성에 대한 경험적 조사를 실시할 것 입니다. 우리는 합리적이고 정확도를 얻을 수 있었지만, 중요한 오류가 (예를 들어, 6-8m) 항상 존재하는 것을 발견했습니다. 이것의 원인은 다른 위치의 유사한 서명을 가진 존재들 때문인데 이것은 순수 WIFI의 기반 방법의 근본적인 한계입니다. 우리는 공공 장소에서의 스마트폰의 높은 밀도에 영감을 얻어, 중대한 오류를 제거 할수 있는 피어 지원 현지화(peer assisted localization) 접근 방식을 제안합니다.  </p><p>이것은 포함한다 정확한 음향 범위 견적 피어 전화간의 그 다음 맵에 표시한다 그들의 공동의 위치를 WIFI 서명 맵에 대한 그것은 제약범위를 기반으로 두고 </p><p>우리는 여려명의 폰 사이의 빠른 음향 범위에 대한 기술을 고안해 내고 프로토 타입을 만들 수 있습니다. 실험은 보여줬다 이거승ㄴ 줄일수 있다 최대 80%의 오류를 2미터와 1미터 사이에서는 &#39;오리지널 WIFI 스캐닝 시간 보다 길지도 않고 짧지도 않는 시간동안&#39; 그리고 배터리 수명에 대한 영향또한 무시할수 있는</p>]]></description><link>88youiju.github.com/post/number-push-the-limit-of-wifi-based-localization-for-smartphones</link><guid isPermaLink="false">number-push-the-limit-of-wifi-based-localization-for-smartphones</guid><dc:creator><![CDATA[<a href="" target="_blank">JuneHyuck Park</a>]]></dc:creator><pubDate>Sat, 19 Jan 2013 04:53:00 GMT</pubDate></item><item><title><![CDATA[Energy consumtion]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_43">power 측정</h1>
+<p>Monsoon power monitor, Eprof, AppScope, PowerTutor, powertop  </p>
+<ol>
+<li><p>monsoon  </p>
+<ul>
+<li>매뉴얼, <a href="http://msoon.github.com/powermonitor/PowerTool/doc/Power%20Monitor%20Manual.pdf">http://msoon.github.com/powermonitor/PowerTool/doc/Power%20Monitor%20Manual.pdf</a></li>
+</ul></li>
+<li><p>Eprof</p>
+<ul>
+<li>Energy Profiler라는 명칭을 가진 이 Eprof는 마이크로스트사에서 만들었다고 하지만 관련 자료를 찾을수 없음</li>
+<li>관련 논문<br>
+Abhinav Pathak, Y. Charlie Hu, Ming Zhang, Where is the energy spent inside my app? Fine Grained Energy Accounting on Smartphones with Eprof</li>
+</ul></li>
+<li><p>AppScope</p>
+<ul>
+<li>연세대 차호정 교수 논문을 찾아 보았고 관련 프로그램을 다운 받음<br>
+AppScope, <a href="http://css3.yonsei.ac.kr:5612/appscope/wiki/Downloads">http://css3.yonsei.ac.kr:5612/appscope/wiki/Downloads</a><br></li>
+<li>AppScope는 현재 HTC Nexus One만을 지원함</li>
+<li>PowerTutor의 한계점과 gps, audio의 정확성에 대한 점을 수정하려고 연세대에서 제작함<br>
+procfs와 BatteryStat이라는 특수 파일 시스템만을 이용하여 하드웨어 컴포넌트들의 사용통계량을 계산하기때문에 정확성보장을 하지못함.
+이것은 항상 폴링을 하고 있어야한다는 점과 이러한 특수파일들이 wifi와 GPS를 프로세스 단위로 제공하지 않아서 이러한 파일에 의존적으로밖에 
+정보를 제공하지 못한다. 이러한 것들은 커널을 수정함으로써 극복할수는 있다. 
+관련 논문으로는 AppScope: Application Energy Metering Framework for Android Smartphones using Kernel Activity Monitoring 이것을 참조 </li>
+<li>관련 논문<br>
+D. Kim, W. Jung, H. Cha, &quot;&#39;Runtime Power Estimation of Mobile AMOLED Displays,&quot;  2013 Design, Automation &amp; Test Europe (DATE&#39;13), Grenoble, France, March 2013, accepted<br>
+W. Jung, C. Kang, C. Yoon, D. Kim and H. Cha, &quot; DevScope: A Nonintrusive and Online Power Analysis for Smartphone Hardware Components,&quot;  2012 International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS&#39;12), Tampere, Finland, October 2012.<br>
+C. Yoon, D. Kim, W. Jung, C. Kang, H. Cha, &quot; AppScope: Application Energy Metering Framework for Android Smartphone using Kernel Activity Monitoring,&quot;  2012 USENIX Annual Technical Conference (USENIX ATC&#39;12), Boston, MA, USA, June 2012.
+W. Jung, D. Kim, H. Cha, &quot;Observing Thermal Characteristics of Energy-aware Mobile Devices,&quot;  2nd Workshop on Cyber-Physical Systems, Networks, and Applications (CPSNA&#39;12), Seoul, Korea, August 19, 2012, pp.465-468.<br>
+S. Choi, B. Song, R. Ha, H. Cha, &quot;Energy-Aware Pipeline Monitoring System Using Piezoelectric Sensor&quot;, IEEE Sensors Jounal, Vol. 12, Issue. 6, June 2012, pp. 1695-1702.<br>
+S. Choi, H. Hwang, B. Song, H. Cha, &quot;Hardware-assisted Energy Monitoring Architecture for Micro Sensor Nodes&quot;, Journal of Systems Architecture, Elsevier, Vol.58, Issue 2, February 2012, pp.73-85.<br>
+J. Choi, H. Cha, &quot;System-Level Power Management for SoC-based Mobile Devices,&quot; IET Computers &amp; Digital Techniques, Volume 4, Issue 5, September 2010, pp. 400-409.<br>
+J. Choi, H. Cha, &quot;A Processor Power Management Scheme for Handheld Systems Considering Off-chip Contributions,&quot;IEEE Transactions on Industrial Informatics, Volume 6, Number 3, August 2010, pp. 255-264.<br>
+W. Jung, K. Kim, H. Cha, &quot;UserScope: A Fine-grained Kernel-level Framework for Monitoring Energy-related Smartphone User Contexts,&quot; 2012, submitted.</li>
+</ul></li>
+<li><p>PowerTutor</p>
+<ul>
+<li>핸드폰에 다운 받아서 실행해봄(wifi가 측정불가, 소스분석중)</li>
+<li>오픈소스 다운받음, <a href="https://github.com/msg555/PowerTutor">https://github.com/msg555/PowerTutor</a><br>
+공식홈페이지, <a href="http://ziyang.eecs.umich.edu/projects/powertutor/index.html">http://ziyang.eecs.umich.edu/projects/powertutor/index.html</a></li>
+<li>대학교수들과 구글사의 엔지니어가 합작하여 개발자들을 위해 만듬</li>
+<li>여러 논문자료에서 이것을 통해 에너지 측정을 함(심도있는 측정내용은 아니었음.)<br>
+리건, Jin Xiao, 홍원기, 스마트폰을 위한 자동화된 어플리케이션 인지 배터리 관리 방안에 관한 연구 </li>
+<li>PowerTutor를 이용해 관련 데이터를 꺼내 원하는 자료로 만들수 있음, <a href="http://stephendnicholas.com/archives/202">http://stephendnicholas.com/archives/202</a>
+<img src="http://stephendnicholas.com/wp-content/uploads/2011/09/PT6.png" alt="&lt;Display Name&gt;">
+<img src="http://stephendnicholas.com/wp-content/uploads/2011/09/PT8.png" alt="&lt;Display Name&gt;"></li>
+<li>관련 논문<br>
+A Framework for Application Energy Consumption analysis in Smart Phones</li>
+</ul></li>
+<li><p>Powertop</p>
+<ul>
+<li>공식홈페이지, <a href="https://01.org/powertop/">https://01.org/powertop/</a></li>
+<li>Unix계열 pc에 대한 전력관리 툴</li>
+<li>관련 프로그램을 받았고 이것을 핸드폰에 플래쉬하여 배터리를 측정할수 있다고함.</li>
+<li>정확한 방법은 아직 찾지 못함.</li>
+</ul></li>
+<li><p>Powermeter, Trepn Profiler</p>
+<ul>
+<li>이것들은 다운 받아 실행했지만 원하는 기능이 없거나 아직 실행방법을 정확히 모름</li>
+<li>Trepn Profiler, <a href="https://developer.qualcomm.com/mobile-development/development-devices/trepn-profiler">https://developer.qualcomm.com/mobile-development/development-devices/trepn-profiler</a></li>
+</ul></li>
+</ol>
+]]></description><link>88youiju.github.com/post/energy-consumtion</link><guid isPermaLink="false">energy-consumtion</guid><dc:creator><![CDATA[<a href="" target="_blank">JuneHyuck Park</a>]]></dc:creator><pubDate>Sat, 19 Jan 2013 04:51:00 GMT</pubDate></item><item><title><![CDATA[iperf]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_50">iperf 환경구축 및 이슈처리</h1>
+
+<h3 id="toc_51">Window</h3>
 <p>iperf를 다운받은 후 iperf가 있는 폴더에서 cmd창에 iperf를 호출</p>
-<h3 id="toc_50">Mac</h3>
+<h3 id="toc_52">Mac</h3>
 <p>mac버전 iperf를 다운후 터미널을 연후 
 맥용 바이너리(실행파일) 만드는 법  </p>
 <ol>
@@ -109,45 +173,4 @@ AppScope은 Event-driven 접근 방식으로 app usage를 수집한다. 그렇�
 <td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current battery voltage level.</td>
 </tr>
 </tbody></table>
-]]></description><link>88youiju.github.com/post/batterymanager-yoyag</link><guid isPermaLink="false">batterymanager-yoyag</guid><dc:creator><![CDATA[<a href="" target="_blank">JuneHyuck Park</a>]]></dc:creator><pubDate>Sat, 19 Jan 2013 03:56:00 GMT</pubDate></item><item><title><![CDATA[Welcome to haroopress]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/a8618a255192bd842fdd62d099776735?r=pg&s=48.jpg&d=identicon"><br/><h3 id="toc_58">환영합니다.</h3>
-
-<ul>
-<li>Welcome</li>
-<li>歡迎</li>
-<li>bienvenida</li>
-<li>accueil</li>
-<li>willkommen</li>
-<li>ようこそ</li>
-<li>välkommet</li>
-<li>grata</li>
-<li>добро пожаловать</li>
-</ul>
-
-<h3 id="toc_59">Intro</h3>
-<p>하루프레스는 하루의 이야기를 블로깅하기 위한 정적 페이지 블로그 엔진입니다.</p>
-<h3 id="toc_60">Haroopress?</h3>
-
-<ul>
-<li><a href="http://haroopress.com/about/">하루프레스?</a></li>
-<li><a href="http://haroopress.com/slides/">하루프레스 웹 프리젠테이션</a></li>
-<li><a href="http://haroopress.com/book/">하루프레스 eBook</a></li>
-<li><a href="http://haroopress.com/diary">하루프레스 개발 다이어리</a></li>
-</ul>
-
-<h3 id="toc_61">Usage</h3>
-
-<ul>
-<li><a href="http://haroopress.com/post/haroopress-install-guide-movie/">5분만에 설치하는 하루프레스 동영상</a></li>
-<li><a href="http://haroopress.com/post/haroopress-quick-guide/">하루프레스 퀵 가이드</a></li>
-<li><a href="http://haroopress.com/post/haroopress-posting-guide/">하루프레스 포스팅 가이드</a></li>
-<li><a href="http://haroopress.com/post/haroopress-default-data-format/">하루프레스 기본 데이터 규약</a></li>
-<li><a href="http://haroopress.com/post/haroopress-update-my-profile/">하루프레스 저작자 프로파일 수정하기</a></li>
-<li><a href="http://haroopress.com/post/harupeureseu-hwangyeongseoljeong-hagi/">하루프레스 환경설정 하기</a></li>
-</ul>
-
-<h3 id="toc_62">History</h3>
-
-<ul>
-<li><a href="https://github.com/rhiokim/haroopress/wiki/Change-History">변경 이력</a></li>
-</ul>
-]]></description><link>88youiju.github.com/post/welcome-to-haroopress</link><guid isPermaLink="false">welcome-to-haroopress</guid><dc:creator><![CDATA[<a href="haroopress" target="_blank">haroopress</a>]]></dc:creator><pubDate>Tue, 21 Feb 2012 00:00:00 GMT</pubDate></item></channel></rss>
+]]></description><link>88youiju.github.com/post/batterymanager-yoyag</link><guid isPermaLink="false">batterymanager-yoyag</guid><dc:creator><![CDATA[<a href="" target="_blank">JuneHyuck Park</a>]]></dc:creator><pubDate>Sat, 19 Jan 2013 03:56:00 GMT</pubDate></item></channel></rss>
