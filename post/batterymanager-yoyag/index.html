@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Batterymanager 요약 |  Net blog</title>
+    <meta name="description" content="hi">
+    <meta name="author" content="JuneHyuck Park">
+    <meta name="keywords" content="java" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="Net blog" type="application/rss+xml">
+
+    <!-- Le styles -->
+    <link rel="canonical" href="88youiju.github.com">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.jsonp.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="pull-right" href="/rss.xml"><span class="icon-rss"></span></a>
+          
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/archives">Archives</a>
+              </li>
+              <li>
+                <a href="/slides">Slides</a>
+              </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+<div class="container page-archive">
+    <div class="row">
+        <div class="span3">
+            <div id="author" class="well">
+                <div>
+                    <h3>About Author</h3>
+                    <ul class="thumbnails">
+                        <li>
+                            <a class="thumbnail">
+                                <img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>JuneHyuck Park</strong><br/>
+                        blog: <a href="88youiju.github.com" target="_blank">88youiju.github.com</a><br/>
+                        twitter: <a href="http://twitter.com/" target="_blank">@</a><br/>
+                        github: <a href="https://github.com/" target="_blank"></a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/" class="twitter-follow-button" data-show-count="true">Follow @</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                    <p>
+                        <p><strong>Please! edit your profile</strong></p>
+                    </p>
+                </div>
+                <div>
+                    <h3>About this Article</h3>
+                    <p>
+                        <h5>Date Released:</h5>
+                        <span>Saturday, January 19 2013 12:56 PM</span>
+                    </p>
+                </div>
+            </div>
+                        <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+                    
+                    <li><a href="/category/android"><i class="icon-book"></i> android</a></li>
+                    
+                </ul>
+            </div>
+
+            
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header">Recent Articles</li>
+    
+        <li>
+            <a href="/post/batterymanager-yoyag" target="_blank">Batterymanager 요약
+            <span class="label">JuneHyuck Park</span></a>
+        </li>
+    
+        <li>
+            <a href="/post/welcome-to-haroopress" target="_blank">Welcome to haroopress
+            <span class="label">haroopress</span></a>
+        </li>
+    
+    </ul>
+</div>
+
+        </div>
+        <div class="span9">
+            <div class="row">
+                <div class="span9">
+                    <div class="well bg">
+                        
+                        <div class="page-header">
+                            <h1>Batterymanager 요약</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                                                
+                                                
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h2 id="toc_0">batterymanager 요약</h2>
+<p>안드로이드가 배터리 정보를 얻기 위해서 Intent.ACTION<em>BATTERY</em>CHANGED의 intent 필터를 이용해서 정보값을 받아와서 표시한다. onReceive매소드를 이용해서 배터리 정보를 받는다. 이 intent는 배터리에 대한 유용한 정보를 포함한다. </p>
+<table><thead>
+<tr>
+<th>constant</th>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>EXTRA_HEALTH</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code>  : integer containing the current health constant.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_ICON _SMALL</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the resource ID of a small status bar icon indicating the current battery state.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_LEVEL</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer field containing the current battery level, from 0 to EXTRA_SCALE.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_PLUGGED</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer indicating whether the device is plugged in to a power source; 0 means it is on battery, other constants are different types of power sources.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_PRESENT</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : boolean indicating whether a battery is present.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_SCALE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the maximum battery level.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_STATUS</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current status constant.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_TECHNOLOGY</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : String describing the technology of the current battery.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_TEMPERATURE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current battery temperature.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_VOLTAGE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current battery voltage level.</td>
+</tr>
+</tbody></table>
+
+<h2 id="toc_1"></h2>
+<p>1 배터리 헬스(Battery health : 배터리 건강 상태) : 배터리 헬스는 아래와 같이 표시됩니다.</p>
+<ul>
+<li>알수없음(BATTERY<em>HEALTH</em>UNKNOWN)</li>
+<li>알수없음(BATTERY<em>HEALTH</em>UNSPECIFIED_FAILURE)</li>
+<li>상태좋음(BATTERY<em>HEALTH</em>GOOD)</li>
+<li>과열상태(BATTERY<em>HEALTH</em>OVERHEAT)</li>
+<li>배터리불량(BATTERY<em>HEALTH</em>DEAD)</li>
+<li>과전압상태(BATTERY<em>HEALTH</em>OVER_VOLTAGE)</li>
+</ul>
+<p>2 배터리 잔량(Battery level)</p>
+<ul>
+<li>배터리스토커는 배터리의 잔량을 아이콘과 함께 알림에 표시합니다.</li>
+<li>배터리스토커는 배터리의 잔량에 따라 다른색의 배터리 이미지를 보여줍니다.</li>
+</ul>
+<p>3 배터리 상태(Battery status) : 배터리 상태는 아래와 같이 표시됩니다.</p>
+<ul>
+<li>알수없는(BATTERY<em>STATUS</em>UNKNOWN)</li>
+<li>충전중인(BATTERY<em>STATUS</em>CHARGING)</li>
+<li>방전중인(BATTERY<em>STATUS</em>DISCHARGING)</li>
+<li>충전정지(BATTERY<em>STATUS</em>NOT_CHARGING)</li>
+<li>완전 충전(BATTERY<em>STATUS</em>FULL)</li>
+</ul>
+<p>4 배터리 잔량</p>
+<ul>
+<li>배터리 잔량은 0~100까지 각 상태에 맞는 색의 배터리와 함께 알림(Status bar : 상태바)에 표시됩니다.</li>
+</ul>
+<p>5 배터리의 상태가 변경된 시간</p>
+<ul>
+<li>충전, 방전등 배터리의 상태가 변할때, 상태가 변한 시간을 보여줍니다.</li>
+</ul>
+
+                        </div>
+                        <hr />
+                                            
+                        <div class="row-fluid">
+                            
+                            <div class="pull-right">
+                                <a href="/post/welcome-to-haroopress" class="btn btn-info">Welcome to haroopress <i class="icon-white icon-chevron-right"></i></a>
+                            </div>
+                            
+
+                            
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+            <!--<a href="/tag/android">android</a>&nbsp;-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12 ">
+                    <div class="well">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>

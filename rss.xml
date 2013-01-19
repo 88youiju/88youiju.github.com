@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Net blog]]></title><description><![CDATA[hi]]></description><link>88youiju.github.com</link><image><url>88youiju.github.com/public/img/favorite.png</url><title>Net blog</title><link>88youiju.github.com</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 19 Jan 2013 03:58:12 GMT</lastBuildDate><atom:link href="88youiju.github.com/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Batterymanager 요약]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/c53425ebe2364d712cd0b48d9fbc10a9?r=pg&s=48.jpg&d=identicon"><br/><h2 id="toc_2">batterymanager 요약</h2>
+<p>안드로이드가 배터리 정보를 얻기 위해서 Intent.ACTION<em>BATTERY</em>CHANGED의 intent 필터를 이용해서 정보값을 받아와서 표시한다. onReceive매소드를 이용해서 배터리 정보를 받는다. 이 intent는 배터리에 대한 유용한 정보를 포함한다. </p>
+<table><thead>
+<tr>
+<th>constant</th>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>EXTRA_HEALTH</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code>  : integer containing the current health constant.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_ICON _SMALL</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the resource ID of a small status bar icon indicating the current battery state.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_LEVEL</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer field containing the current battery level, from 0 to EXTRA_SCALE.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_PLUGGED</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer indicating whether the device is plugged in to a power source; 0 means it is on battery, other constants are different types of power sources.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_PRESENT</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : boolean indicating whether a battery is present.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_SCALE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the maximum battery level.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_STATUS</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current status constant.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_TECHNOLOGY</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : String describing the technology of the current battery.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_TEMPERATURE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current battery temperature.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>EXTRA_VOLTAGE</td>
+<td>Extra for <code>ACTION_BATTERY_CHANGED</code> : integer containing the current battery voltage level.</td>
+</tr>
+</tbody></table>
+]]></description><link>88youiju.github.com/post/batterymanager-yoyag</link><guid isPermaLink="false">batterymanager-yoyag</guid><dc:creator><![CDATA[<a href="" target="_blank">JuneHyuck Park</a>]]></dc:creator><pubDate>Sat, 19 Jan 2013 03:56:00 GMT</pubDate></item><item><title><![CDATA[Welcome to haroopress]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/a8618a255192bd842fdd62d099776735?r=pg&s=48.jpg&d=identicon"><br/><h3 id="toc_10">환영합니다.</h3>
+
+<ul>
+<li>Welcome</li>
+<li>歡迎</li>
+<li>bienvenida</li>
+<li>accueil</li>
+<li>willkommen</li>
+<li>ようこそ</li>
+<li>välkommet</li>
+<li>grata</li>
+<li>добро пожаловать</li>
+</ul>
+
+<h3 id="toc_11">Intro</h3>
+<p>하루프레스는 하루의 이야기를 블로깅하기 위한 정적 페이지 블로그 엔진입니다.</p>
+<h3 id="toc_12">Haroopress?</h3>
+
+<ul>
+<li><a href="http://haroopress.com/about/">하루프레스?</a></li>
+<li><a href="http://haroopress.com/slides/">하루프레스 웹 프리젠테이션</a></li>
+<li><a href="http://haroopress.com/book/">하루프레스 eBook</a></li>
+<li><a href="http://haroopress.com/diary">하루프레스 개발 다이어리</a></li>
+</ul>
+
+<h3 id="toc_13">Usage</h3>
+
+<ul>
+<li><a href="http://haroopress.com/post/haroopress-install-guide-movie/">5분만에 설치하는 하루프레스 동영상</a></li>
+<li><a href="http://haroopress.com/post/haroopress-quick-guide/">하루프레스 퀵 가이드</a></li>
+<li><a href="http://haroopress.com/post/haroopress-posting-guide/">하루프레스 포스팅 가이드</a></li>
+<li><a href="http://haroopress.com/post/haroopress-default-data-format/">하루프레스 기본 데이터 규약</a></li>
+<li><a href="http://haroopress.com/post/haroopress-update-my-profile/">하루프레스 저작자 프로파일 수정하기</a></li>
+<li><a href="http://haroopress.com/post/harupeureseu-hwangyeongseoljeong-hagi/">하루프레스 환경설정 하기</a></li>
+</ul>
+
+<h3 id="toc_14">History</h3>
+
+<ul>
+<li><a href="https://github.com/rhiokim/haroopress/wiki/Change-History">변경 이력</a></li>
+</ul>
+]]></description><link>88youiju.github.com/post/welcome-to-haroopress</link><guid isPermaLink="false">welcome-to-haroopress</guid><dc:creator><![CDATA[<a href="haroopress" target="_blank">haroopress</a>]]></dc:creator><pubDate>Tue, 21 Feb 2012 00:00:00 GMT</pubDate></item></channel></rss>
